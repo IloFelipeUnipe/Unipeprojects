@@ -1,17 +1,48 @@
 #include <stdio.h>
+#include <math.h>
 
 int main () {
-
 	int opcao = 0;
 	
 	do {
-
-	printf("Digite uma  opcao: \n 1. \n 2. \n 3. \n 4. \n 5.\n 6. \n 7. \n 8. \n 9. \n 10 \n");
+		
+	printf("Digite uma  opcao: \n 1:se um numero e par ou impar");
+	printf("\n 2:Calculo de potencia");
+	printf("\n 3");
+	printf("\n 4");
+	printf("\n 5");
+	printf("\n 6");
+	printf("\n 7");
+	printf("\n 8");
+	printf("\n 9");
+	printf("\n 10 \n");
 	scanf("%d", &opcao);
-	
 	if(opcao >= 11){
 		printf("nao ha esse numero!	\n");
 	}
+	if(opcao == 1){
+		int numero1;
+		printf("Diga um numero para saber se e par \n");
+		scanf("%d", &numero1);
+		if(numero1 % 2 == 0){
+			printf("Esse numero e par! \n");
+		}if(numero1 % 2 !=0){
+			printf("Esse numero nao par! \n");
+		}
+	}
+	if(opcao ==2){
+		float numero2;
+		int numero3;
+		float potenciado;
+		printf("digite um numero para a base \n");
+		scanf("%f", &numero2);
+		printf("digite um numero para o exponente \n");
+		scanf("%d",&numero3);
+		potenciado = pow(numero2,numero3);
+		printf("Resultado: %f \n",potenciado);
+		
+	}
+	
 	
 	} while ( opcao != 0 );
 	
