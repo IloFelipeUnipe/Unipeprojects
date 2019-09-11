@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main () {
+
+	int opcao = 0;
+	
+	do {
+
+	printf("Digite uma  opcao: \n 1. \n 2. \n 3. \n 4. \n 5.\n 6. \n 7. \n 8. \n 9. \n 10 \n");
+	scanf("%d", &opcao);
+	
+	if(opcao >= 11){
+		printf("nao ha esse numero!	\n");
+	}
+	
+	} while ( opcao != 0 );
+	
+	printf("	Adeus!	");
+	
+	return 0;	
+}
