@@ -8,7 +8,7 @@ int main () {
 		
 	printf("Digite uma  opcao: \n 1:se um numero e par ou impar");
 	printf("\n 2:Calculo de potencia");
-	printf("\n 3");
+	printf("\n 3:Calculo de raiz");
 	printf("\n 4");
 	printf("\n 5");
 	printf("\n 6");
@@ -31,18 +31,28 @@ int main () {
 		}
 	}
 	if(opcao ==2){
-		float numero2;
-		int numero3;
+		float base1;
+		int expo1;
 		float potenciado;
 		printf("digite um numero para a base \n");
-		scanf("%f", &numero2);
+		scanf("%f", &base1);
 		printf("digite um numero para o exponente \n");
-		scanf("%d",&numero3);
-		potenciado = pow(numero2,numero3);
+		scanf("%d",&expo1);
+		potenciado = pow(base1,expo1);
 		printf("Resultado: %.4e \n",potenciado);
 		
 	}
-	
+	if(opcao == 3){
+		float base2;
+		int expo2;
+		float raiz;
+		printf("digite um numero para a base \n");
+		scanf("%f", &base2);
+		printf("digite um numero para o exponente \n");
+		scanf("%d",&expo2);
+		raiz = pow(base2,1.0/expo2);
+		printf("Resultado: %.4e \n",raiz);
+	}
 	
 	} while ( opcao != 0 );
 	
