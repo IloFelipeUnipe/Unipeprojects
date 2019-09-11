@@ -39,7 +39,7 @@ int main () {
 		printf("digite um numero para o exponente \n");
 		scanf("%d",&numero3);
 		potenciado = pow(numero2,numero3);
-		printf("Resultado: %f \n",potenciado);
+		printf("Resultado: %.4e \n",potenciado);
 		
 	}
 	
