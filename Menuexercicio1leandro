@@ -10,7 +10,7 @@ int main () {
 	printf("\n 2:Calculo de potencia");
 	printf("\n 3:Calculo de raiz");
 	printf("\n 4:Calculo de ano bissexto");
-	printf("\n 5");
+	printf("\n 5:Calculo de media ponderada");
 	printf("\n 6");
 	printf("\n 7");
 	printf("\n 8");
@@ -62,7 +62,24 @@ int main () {
 		}if(numero1 % 4 !=0){
 			printf("Esse ano nao e bissexto! \n");
 		}
-	
+	if(opcao == 5){
+		int nota1 = 0;
+		int nota2 = 0;
+		int nota3 = 0;
+		printf("Diga sua primeira nota\n");
+		scanf("%d", &nota1);
+		printf("Diga sua segunda nota\n");
+		scanf("%d", &nota2);
+		printf("Diga sua terceira nota\n");
+		scanf("%d", &nota3);
+		nota3 = nota3*2;
+		media = (nota1+nota2+nota3)/4;
+		if(media < 60){
+			printf("voce foi reprovado!! \n");
+		}if(media >= 60){
+			printf("voce esta aprovado!! \n");
+		}
+ 	 }
 	} while ( opcao != 0 );
 	
 	printf("	Adeus!	");
