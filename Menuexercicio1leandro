@@ -9,7 +9,7 @@ int main () {
 	printf("Digite uma  opcao: \n 1:se um numero e par ou impar");
 	printf("\n 2:Calculo de potencia");
 	printf("\n 3:Calculo de raiz");
-	printf("\n 4");
+	printf("\n 4:Calculo de ano bissexto");
 	printf("\n 5");
 	printf("\n 6");
 	printf("\n 7");
