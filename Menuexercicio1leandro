@@ -53,6 +53,15 @@ int main () {
 		raiz = pow(base2,1.0/expo2);
 		printf("Resultado: %.4e \n",raiz);
 	}
+	if(opcao == 4){
+		int numero2;
+		printf("Diga um ano para saber se e bissexto\n");
+		scanf("%d", &numero2);
+		if(numero2 % 4 == 0){
+			printf("Esse ano e bissexto! \n");
+		}if(numero1 % 4 !=0){
+			printf("Esse ano nao e bissexto! \n");
+		}
 	
 	} while ( opcao != 0 );
 	
