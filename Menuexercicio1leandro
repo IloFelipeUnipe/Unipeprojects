@@ -3,7 +3,7 @@
 
 int main () {
 	int opcao = 0;
-	
+	int media = 0;
 	do {
 		
 	printf("Digite uma  opcao: \n 1:se um numero e par ou impar");
@@ -59,9 +59,10 @@ int main () {
 		scanf("%d", &numero2);
 		if(numero2 % 4 == 0){
 			printf("Esse ano e bissexto! \n");
-		}if(numero1 % 4 !=0){
+		}if(numero2 % 4 !=0){
 			printf("Esse ano nao e bissexto! \n");
 	}
+  }
 	if(opcao == 5){
 		int nota1 = 0;
 		int nota2 = 0;
@@ -98,9 +99,9 @@ int main () {
     		}
     		printf("sua nota é: %f", media2);
  	 }	
+
 	} while ( opcao != 0 );
 	
 	printf("	Adeus!	");
-	
 	return 0;	
 }
