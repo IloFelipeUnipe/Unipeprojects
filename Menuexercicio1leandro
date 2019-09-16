@@ -15,7 +15,7 @@ int main () {
 	printf("\n 7");
 	printf("\n 8");
 	printf("\n 9");
-	printf("\n 10 \n");
+	printf("\n 10:Meu nome e matricula \n");
 	scanf("%d", &opcao);
 	if(opcao >= 11){
 		printf("nao ha esse numero!	\n");
@@ -99,7 +99,11 @@ int main () {
     		}
     		printf("sua nota é: %f", media2);
  	 }	
-
+   	 if(opcao == 10){
+    	 	int matricula;
+     		matricula = 1920027007;
+     		printf("Aluno:Ilo Felipe Ferreira Camara Cavalcante\n Matricula:%x\n", matricula );
+   	 }
 	} while ( opcao != 0 );
 	
 	printf("	Adeus!	");
