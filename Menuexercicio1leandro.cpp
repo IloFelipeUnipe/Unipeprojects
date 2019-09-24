@@ -124,13 +124,13 @@ int main () {
 		
 	 }
       	 if(opcao == 9){
-   	 		int n6;
-   	 		printf("diga um valor!\n");
-   	 		scanf("%d", &n6);
-   	 		n6=(n6-1) + (n6-2);
-        		printf("numero final : %d\n" , n6);
+   	 	int n6;
+   	 	printf("diga um valor!\n");
+   	 	scanf("%d", &n6);
+   	 	n6=(n6-1) + (n6-2);
+        	printf("numero final : %d\n" , n6);
 			
-			}
+	}
     
    	 if(opcao == 10){
     	 	int matricula;
