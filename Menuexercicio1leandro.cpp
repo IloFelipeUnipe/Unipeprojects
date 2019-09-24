@@ -13,7 +13,7 @@ int main () {
 	printf("\n 5:Calculo de media ponderada");
 	printf("\n 6:Calculo de media entre 0 e 10");
 	printf("\n 7:Calculo de fatorial");
-	printf("\n 8");
+	printf("\n 8:Calculo de numero primo");
 	printf("\n 9");
 	printf("\n 10:Meu nome e matricula \n");
 	scanf("%d", &opcao);
@@ -97,7 +97,7 @@ int main () {
 			  printf("Nota invalida!\n");
         			break;
     		}
-    		printf("sua nota é: %f", media2);
+    		printf("sua nota Ã©: %f", media2);
  	 }
     	if(opcao == 7){
      		 int contador = 1;
