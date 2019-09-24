@@ -14,7 +14,7 @@ int main () {
 	printf("\n 6:Calculo de media entre 0 e 10");
 	printf("\n 7:Calculo de fatorial");
 	printf("\n 8:Calculo de numero primo");
-	printf("\n 9");
+	printf("\n 9:Calculo de numero de fibonacci");
 	printf("\n 10:Meu nome e matricula \n");
 	scanf("%d", &opcao);
 	if(opcao >= 11){
@@ -62,7 +62,7 @@ int main () {
 		}if(numero2 % 4 !=0){
 			printf("Esse ano nao e bissexto! \n");
 	}
-  }
+  	}
 	if(opcao == 5){
 		int nota1 = 0;
 		int nota2 = 0;
@@ -99,11 +99,11 @@ int main () {
     		}
     		printf("sua nota é: %f", media2);
  	 }
-    	if(opcao == 7){
-     		 int contador = 1;
-     		 int numero3;
-     		 int k;
-     		 int fin = 1;
+    	 if(opcao == 7){
+     		int contador = 1;
+     		int numero3;
+     	        int k;
+     		int fin = 1;
      	 	printf("Diga um numero: \n");
       		scanf("%d", &numero3);
      	 	for(k=1; k <= numero3; k++){
@@ -112,15 +112,23 @@ int main () {
     		  }
    		 printf("o fatorial de %d \n", fin);
    	 }
-   	 	if(opcao == 8){
-   	 		int primo;
+   	 if(opcao == 8){
+   	 	int primo;
+   	 	printf("diga um valor!\n");
+   	 	scanf("%d", &primo);
+   	 	if(primo % 2 == 0 || primo % 3 == 0){
+   	 		printf("Esse numero nao e primo....\n");
+			} else{
+				printf("esse numero e primo!\n");
+			}
+		
+	 }
+      	 if(opcao == 9){
+   	 		int n6;
    	 		printf("diga um valor!\n");
-   	 		scanf("%d", &primo);
-   	 		if(primo % 2 == 0 || primo % 3 == 0){
-   	 			printf("Esse numero nao e primo....\n");
-				} else{
-					printf("esse numero e primo!\n");
-				}
+   	 		scanf("%d", &n6);
+   	 		n6=(n6-1) + (n6-2);
+        		printf("numero final : %d\n" , n6);
 			
 			}
     
