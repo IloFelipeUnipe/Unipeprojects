@@ -10,7 +10,7 @@ int main () {
 	
 	do {
 
-	printf("Digite uma  opçao: \n 1. Candidato A \n 2. Candidato B \n 3. Candidato D \n 4. Nulo \n 5. Branco \n");
+	printf("Digite uma  opÃ§ao: \n 1. Candidato A \n 2. Candidato B \n 3. Candidato D \n 4. Nulo \n 5. Branco \n");
 	scanf("%d", &contador);
 	switch(contador){
 		case 1: candA++;
