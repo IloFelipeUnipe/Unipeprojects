@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+  char texto1 [100];
+  char texto2 [100];
+  int i = 0 ;
+  printf("entre com um texto: ");
+  scanf("%s", texto1);
+  printf("entre com um outro texto: ");
+  scanf("%s", texto2);
+  for(i=0; i < sizeof(*texto1);i++ ){
+    if (texto1[i] != texto2[i]){
+    printf("Estes textos sao differentes!");
+    return 0;
+    }
+  }
+  printf("estes textos sao iguais!");
+  return 0;
+}
