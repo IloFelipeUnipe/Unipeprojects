@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char n1 [30];
+    int i;
+
+    printf("Diga uma palavra\n");
+    scanf("%s", n1);
+
+    for(i=0 ; i < sizeof(n1) ;i++){
+
+      n1[i] = toupper(n1[i]);
+    }
+    printf(" Maiusculo: %s \n", n1);
+
+    
+    for(i=0 ; i < sizeof(n1) ;i++){
+
+      n1[i] = tolower(n1[i]);
+    }
+    printf(" Minusculo: %s", n1);
+
+	return 0;
+}
