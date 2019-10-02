@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    char s [20];
+    
+    int i;
+    int contador = 0;
+    
+    printf("Diga uma sequencia de numeros \n");
+    scanf("%s", s);
+    
+    for(i=0; s[i]!= '\0'  && i < sizeof(s) ;i++){
+    	if(s[i] == '3'){
+    	contador++;
+    	}
+	}
+    printf("numeros:  %d \n", i);
+    printf("vezes de tres: %d", contador);
+
+	return 0;
+}
