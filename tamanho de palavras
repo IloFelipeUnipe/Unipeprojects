@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char n1 [20];
+    int n11;
+    printf("Diga uma palavra \n");
+    scanf("%s", n1);
+
+    char n2 [20];
+    int n22;
+    printf("Diga outra palavra \n");
+    scanf("%s", n2);
+    
+    n11 = strlen(n1);
+    printf("primeira palavra: %d \n",n11);
+    n22 = strlen(n2);
+    printf("segunda palavra: %d \n",n22);
+    int tamanho = 0;
+
+    tamanho = strcmp(n1 , n2);
+    if ( tamanho < 0){
+      printf("a primeira palavra e menor que a segunda");
+    }if (tamanho == 0){
+      printf("as palavras tem o mesmo tamanho");
+    }if (tamanho > 0){
+      printf("a primeira palavra e maior que a segunda");
+    }
+
+
+	return 0;
+}
