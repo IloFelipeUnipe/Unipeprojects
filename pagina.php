@@ -1,6 +1,7 @@
+
 <?php
 
-    /*include 'Conexao.php';
+    include 'operacoes.php';
 
     $conexao = getConnection();
 
@@ -8,25 +9,22 @@
         echo "Conectado!";
     }else{
         echo "Erro na Conexao!";
-    }*/
-
-    include 'operacoes.php';
-
-    //inserir("Joana", "joana@email.com");
-
-    $produtos = listarTodos();
-    for($i = 0; $i < count($produtos); $i++){
-        echo "Id: " . $produtos[$i]["id"] . "<br/>";
-        echo "Nome: " . $produtos[$i]["nome"] . "<br/>";
-        echo "Email: " . $produtos[$i]["email"] . "<br/>";
     }
 
-    //alterar(1, "João das Flores", "joao@email.com")
 
-    //deletar(1);
+    $pessoas = listarTodos();
+    for($i = 0; $i < count($pessoas); $i++){
+        echo "Id: " . $pessoas[$i]["id"] . "<br/>";
+        echo "Nome: " . $pessoas[$i]["nome"] . "<br/>";
+        echo "Email: " . $pessoas[$i]["email"] . "<br/>";
+    }
 
-    //$pessoa = buscarPorId(3);
+    alterar(1);
+    
+    deletar(2);
 
-    //echo "Nome: " . $pessoa["nome"] . "<br/>";
+    $pessoas = buscarPorId(3);
+
+    echo "Nome: " . $pessoas["nome"] . "<br/>";
 
 ?>
