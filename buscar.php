@@ -8,16 +8,17 @@
 <?php
     include 'operacoes.php';
     if ($_SERVER["REQUEST_METHOD"]== "POST"){
-        $produto = buscarPorId($_POST["id"]);
-        echo "Id: " . $produto["id"] . "<br/>";
-        echo "Nome: " . $produto["nome"] . "<br/>";
-        echo "preco: " . $produto["preco"] . "<br/> <br/>";
+        $artefato = buscarPorId($_POST["id"]);
+        echo "Id: " . $artefato["id"] . "<br/>";
+        echo "Nome: " . $artefato["nome"] . "<br/>";
+        echo "Tipo: " . $artefato["tipo"] . "<br/>";
+        echo "Atributos: " . $artefato["atributos"] . "<br/> <br/>";
     }
     
     
 ?>
-    <h1>buscando um item</h1>
-    <form id="produtosdb" action="buscar.php" method="POST" onsubmit="return validar()">
+    <h1>buscando um Artefato</h1>
+    <form id="artefatosdb" action="buscar.php" method="POST" onsubmit="return validar()">
         id
         <input type="text" name="id"><br><br>
         
@@ -36,7 +37,7 @@
                 )
                 return false;
             }
-            if(form.preco.value == false){
+            if(form.tipo.value == false){
                 alert("Informe uma quantidade")
                 return false;
             }
