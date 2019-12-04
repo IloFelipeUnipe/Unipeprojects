@@ -1,10 +1,10 @@
 <?php
     include "Conexao.php";
-    function inserir($nome, $preco){
+    function inserir($nome,$tipo, $atributos){
         //Abrir a Conexão
         $conexao = getConnection();
         //Criar a String(Query) SQL
-        $query = "INSERT INTO produtos (nome, preco) VALUES ('$nome','$preco')";
+        $query = "INSERT INTO artefatos (nome, tipo , atributos) VALUES ('$nome','$tipo' , '$atributos')";
         //Executar a String(Query) SQL no banco de dados
         if(mysqli_query($conexao,$query)){
             echo "Inserido com Sucesso! <br/>";
@@ -15,30 +15,30 @@
         mysqli_close($conexao);
     }
     function listarTodos(){
-        $produtos = array();
+        $artefatos = array();
         $conexao = getConnection();
-        $query = "SELECT * FROM produtos";
+        $query = "SELECT * FROM artefatos";
         $result = mysqli_query($conexao, $query);
-        while($produto = mysqli_fetch_array($result)){
-            $produtos[] = $produto;
+        while($artefato = mysqli_fetch_array($result)){
+            $artefatos[] = $artefato;
         }
         mysqli_close($conexao);
-        return $produtos;
+        return $artefatos;
     }
-    function alterar($id, $nome, $preco){
+    function alterar($id, $nome, $tipo , $atributos){
         
         $conexao = getConnection();
-        $query = "UPDATE produtos SET nome = '$nome', preco = '$preco' WHERE id = '$id'";
+        $query = "UPDATE artefatos SET nome = '$nome', tipo = '$tipo' , atributos = '$atributos' WHERE id = '$id'";
         if(mysqli_query($conexao, $query) == true){
-            echo "Produto alterado com Sucesso!";
+            echo "artefato alterado com Sucesso!";
         }else{
-            echo "Erro ao alterar um produto!";
+            echo "Erro ao alterar um artefato!";
         }
         mysqli_close($conexao);
     }
     function deletar($id){
         $conexao = getConnection();
-        $query = "DELETE FROM produtos WHERE id = '$id'";
+        $query = "DELETE FROM artefatos WHERE id = '$id'";
         if(mysqli_query($conexao, $query) == true){
             echo "item deletado com Sucesso!";
         }else{
@@ -49,10 +49,10 @@
     
     function buscarPorId($id){
         $conexao = getConnection();
-        $query = "SELECT * FROM produtos WHERE id = '$id'";
+        $query = "SELECT * FROM artefatos WHERE id = '$id'";
         $result = mysqli_query($conexao, $query);
-        $produto = mysqli_fetch_array($result);
+        $artefato = mysqli_fetch_array($result);
         mysqli_close($conexao);
-        return $produto;
+        return $artefato;
     }
 ?>
