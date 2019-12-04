@@ -8,13 +8,12 @@
 <?php
     include 'operacoes.php';
     if ($_SERVER["REQUEST_METHOD"]== "POST"){
-        buscarPorId($_POST["id"]);
+        $produto = buscarPorId($_POST["id"]);
+        echo "Id: " . $produto["id"] . "<br/>";
+        echo "Nome: " . $produto["nome"] . "<br/>";
+        echo "preco: " . $produto["preco"] . "<br/> <br/>";
     }
-    $produto = buscarPorId("id");
-    $i = "id";
-    echo "Id: " . $produto[$i]["id"] . "<br/>";
-    echo "Nome: " . $produto[$i]["nome"] . "<br/>";
-    echo "preco: " . $produto[$i]["preco"] . "<br/> <br/>";
+    
     
 ?>
     <h1>buscando um item</h1>
