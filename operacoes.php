@@ -1,13 +1,10 @@
 <?php
-
     include "Conexao.php";
-
-    function inserir($nome, $email){
-
+    function inserir($nome, $preco){
         //Abrir a Conexão
         $conexao = getConnection();
         //Criar a String(Query) SQL
-        $query = "INSERT INTO pessoas (nome, email) VALUES ('$nome','$email')";
+        $query = "INSERT INTO produtos (nome, preco) VALUES ('$nome','$preco')";
         //Executar a String(Query) SQL no banco de dados
         if(mysqli_query($conexao,$query)){
             echo "Inserido com Sucesso! <br/>";
@@ -17,68 +14,45 @@
         //Fechar a Conexão
         mysqli_close($conexao);
     }
-
     function listarTodos(){
-
-        $pessoas = array();
-
+        $produtos = array();
         $conexao = getConnection();
-
-        $query = "SELECT * FROM pessoas";
-
+        $query = "SELECT * FROM produtos";
         $result = mysqli_query($conexao, $query);
-
-        while($pessoa = mysqli_fetch_array($result)){
-            $pessoas[] = $pessoa;
+        while($produto = mysqli_fetch_array($result)){
+            $produtos[] = $produto;
         }
-
         mysqli_close($conexao);
-
-        return $pessoas;
+        return $produtos;
     }
-
-    function alterar($id, $nome, $email){
+    function alterar($id, $nome, $preco){
         
         $conexao = getConnection();
-
-        $query = "UPDATE pessoas SET nome = '$nome', email = '$email' WHERE id = '$id'";
-
+        $query = "UPDATE produtos SET nome = '$nome', preco = '$preco' WHERE id = '$id'";
         if(mysqli_query($conexao, $query) == true){
-            echo "Pessoa alterada com Sucesso!";
+            echo "Produto alterado com Sucesso!";
         }else{
-            echo "Erro ao alterar um pessoa!";
+            echo "Erro ao alterar um produto!";
         }
-
         mysqli_close($conexao);
     }
-
     function deletar($id){
-
         $conexao = getConnection();
-
-        $query = "DELETE FROM pessoas WHERE id = '$id'";
-
+        $query = "DELETE FROM produtos WHERE id = '$id'";
         if(mysqli_query($conexao, $query) == true){
-            echo "Pessoa deletada com Sucesso!";
+            echo "item deletado com Sucesso!";
         }else{
-            echo "Erro ao tentar deletar um pessoa!";
+            echo "Erro ao tentar deletar um item!";
         }
-
         mysqli_close($conexao);
     }
-
+    
     function buscarPorId($id){
-
         $conexao = getConnection();
-
-        $query = "SELECT * FROM pessoas WHERE id = '$id'";
-
+        $query = "SELECT * FROM produtos WHERE id = '$id'";
         $result = mysqli_query($conexao, $query);
-
-        $pessoa = mysqli_fetch_array($result);
-
+        $produto = mysqli_fetch_array($result);
         mysqli_close($conexao);
-
-        return $pessoa;
-    }   
+        return $produto;
+    }
 ?>
